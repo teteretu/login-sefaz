@@ -26,9 +26,10 @@ CREATE TABLE `user` (
 );  
   
 CREATE TABLE `user_phone` (  
-	`user_email` varchar(45) NOT NULL,  
 	`phone_number` varchar(45) NOT NULL,  
+	`user_email` varchar(45) NOT NULL,  
   	`ddd` INT NULL,  
   	`tp_phone` varchar(45) DEFAULT NULL,  
-  	PRIMARY KEY (`phone_number`)  
+  	PRIMARY KEY (`phone_number`),  
+	CONSTRAINT FOREIGN KEY (`user_email`) REFERENCES `user` (`email`) . 
 );  
