@@ -2,8 +2,8 @@
 Desafio Sefaz para desenvolvedores
 
 # Versão das Libs utilizadas:
-JSP-API - 2.2
-IDE - Eclipse oxygen.3.7
+JSP-API - 2.2  
+IDE - Eclipse oxygen.3.7  
 JAVA - 1.8
 Apache Tomcat - 8.5
 JSTL - 1.2
