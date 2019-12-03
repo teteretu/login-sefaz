@@ -18,9 +18,17 @@ Cadastro de usuários;
 # Configuração do banco de dados;  
 create DATABASE mysql_database;  
 use mysql_database;  
-CREATE TABLE login (  
-  username varchar(45) NOT NULL,  
-  password varchar(45) DEFAULT NULL,  
-  PRIMARY KEY (username)  
+CREATE TABLE `user` (  
+  `email` varchar(45) NOT NULL,  
+  `password` varchar(45) NOT NULL,  
+  `user_name` varchar(45) NOT NULL,  
+  PRIMARY KEY (`email`)  
 );  
   
+CREATE TABLE `user_phone` (  
+	`user_email` varchar(45) NOT NULL,  
+	`phone_number` varchar(45) NOT NULL,  
+  	`ddd` INT NULL,  
+  	`tp_phone` varchar(45) DEFAULT NULL,  
+  	PRIMARY KEY (`phone_number`)  
+);  
