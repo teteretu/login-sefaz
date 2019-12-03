@@ -17,8 +17,8 @@ import com.ivia.model.User;
  * @email Ramesh Fadatare
  */
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/user")
+public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UserDao loginDao;
 

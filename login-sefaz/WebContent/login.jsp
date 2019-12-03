@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sefaz Login</title>
 </head>
 <body>
 	<div align="center">
-		<h1>Employee Login Form</h1>
+		<h1>Welcome to Sefaz Login</h1>
 		<form action="<%=request.getContextPath()%>/login" method="post">
 			<table style="with: 100%">
 				<tr>
-					<td>UserName</td>
-					<td><input type="text" name="username" /></td>
+					<td>Email</td>
+					<td><input type="text" name="email" /></td>
 				</tr>
 				<tr>
 					<td>Password</td>
