@@ -33,3 +33,5 @@ CREATE TABLE `user_phone` (
   	PRIMARY KEY (`phone_number`),  
 	CONSTRAINT FOREIGN KEY (`user_email`) REFERENCES `user` (`email`) . 
 );  
+insert into user_phone (phone_number, user_email, ddd, tp_phone)  
+values ('99599-3818', 'melo.1996.matheus@gmail.com', '81', 'CELL')
