@@ -43,21 +43,33 @@ public class GetUsersServlet extends HttpServlet {
         UserPhoneDAO userPhoneDAO = new UserPhoneDAO();
         List<UserPhone> usersPhone = new ArrayList<UserPhone>();
         
+        printWriter.print("<table>");
+        printWriter.print("<thead>");
+        printWriter.print("<tr>");
+        printWriter.print("<td>Email</td>");
+        printWriter.print("<td>Password</td>");
+        printWriter.print("<td>Nome</td>");
+        printWriter.print("<td>Telefones</td>");
+        printWriter.print("</tr>");
+        printWriter.print("</thead>");
 		for (User user : users) {
-			printWriter.print("<p> Email :: " + user.getEmail() + "</p>");
-	        printWriter.print("<p> Password :: " + user.getPassword() + "</p>");
-	        printWriter.print("<p> UserName :: " + user.getUserName() + "</p>");
-	        
+			printWriter.print("<tr id='mainTr' name='mainTr'>");
+			printWriter.print("<td> " + user.getEmail() + " </td>");
+			printWriter.print("<td> " + user.getPassword() + " </td>");
+			printWriter.print("<td> " + user.getUserName() + " </td>");
+		    
 	        usersPhone = userPhoneDAO.getUserPhoneByWhere(" AND user_email = '" + user.getEmail() + "' ");
 	        
 	        if (usersPhone != null && usersPhone.size() > 0) {
 	        	int i = 0;
 	        	for (UserPhone userPhone : usersPhone) {
 	        		i++;
-	        		printWriter.print("<p> Telefone " + i + " :: (" + userPhone.getDdd() + ") " + userPhone.getPhoneNumber() + "</p>");
+	        		printWriter.print("<td> Telefone " + i + " :: (" + userPhone.getDdd() + ") " + userPhone.getPhoneNumber() + "</td>");
 	        	}
 	        }
+	        printWriter.print("</tr>");
 		}
+		printWriter.print("</table>");
         
         printWriter.print("</body>");
         printWriter.print("</html>");
