@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.ivia.dao.UserDao;
+import com.ivia.dao.UserDAO;
 import com.ivia.model.User;
 
 /**
@@ -20,10 +20,10 @@ import com.ivia.model.User;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UserDao loginDao;
+	private UserDAO loginDao;
 
 	public void init() {
-		loginDao = new UserDao();
+		loginDao = new UserDAO();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
